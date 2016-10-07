@@ -15,6 +15,7 @@ class TodosController < ApplicationController
 
   # POST /todos
   def create
+    ap params
     @todo = Todo.new(todo_params)
 
     if @todo.save
@@ -39,6 +40,7 @@ class TodosController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_todo
       @todo = Todo.find(params[:id])
