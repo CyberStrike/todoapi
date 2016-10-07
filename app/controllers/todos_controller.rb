@@ -14,8 +14,7 @@ class TodosController < ApplicationController
   end
 
   # POST /todos
-  def create
-    ap params
+  def create 
     @todo = Todo.new(todo_params)
 
     if @todo.save
